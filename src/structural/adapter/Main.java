@@ -2,10 +2,12 @@ package structural.adapter;
 
 public class Main {
     public static void main(String[] ar) {
+        String jsonData = "this is json data";
+        String xmlData = "this is xml data";
         AnalyticsTool analyticsTool = new JsonAnalyticsTool();
-        analyticsTool.analyzeData("this is json data");
+        analyticsTool.analyzeData(jsonData);
 
         analyticsTool = new XmlToJsonAdapter();
-        analyticsTool.analyzeData("this is xml data");
+        analyticsTool.analyzeData(xmlData);
     }
 }

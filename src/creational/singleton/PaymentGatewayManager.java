@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 class PaymentGatewayManager {
     private static PaymentGatewayManager instance;
-    private static Lock mtx = new ReentrantLock();
+    private static final Lock mtx = new ReentrantLock();
 
     private PaymentGatewayManager() {
         System.out.println("PaymentGatewayManger initialised");
